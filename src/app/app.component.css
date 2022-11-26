@@ -1,0 +1,55 @@
+#container {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+#content {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+p {
+  font-size: 2rem;
+  color: #e9c46a;
+}
+.btnStartStyle {
+  width: 100px;
+  height: 50px;
+  background-color: #f77f00;
+  color: #eae2b7;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.btnStartStyle:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  background-color: #eae2b7;
+  color: #f77f00;
+}
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+}
+app-square {
+  border: 1px solid black;
+  height: 100px;
+  user-select: none;
+}
+.btn--input {
+  width: 100%;
+  height: 100%;
+  font-size: 5em !important;
+  background-color: #eae2b7;
+  cursor: pointer;
+}
