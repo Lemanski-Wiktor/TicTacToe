@@ -62,7 +62,12 @@ export class AppComponent implements OnInit {
         const [a, b, c] = lines[i];
         //
         // debugger;
-        if (this.squares[4] === this.squares[8] && this.chars.length == 3) {
+        if (
+          (this.squares[4] === this.squares[8] ||
+            this.squares[1] === this.squares[8]) &&
+          this.chars.length == 3 &&
+          this.squares[8] === 'O'
+        ) {
           this.squares.splice(2, 1, 'X');
           this.chars.push('X');
           return;
@@ -76,7 +81,17 @@ export class AppComponent implements OnInit {
           return;
         }
         if (
-          this.squares[1] === this.squares[7] &&
+          this.squares[0] === this.squares[7] &&
+          this.chars.length === 3 &&
+          this.squares[0] === 'O'
+        ) {
+          this.squares.splice(6, 1, 'X');
+          this.chars.push('X');
+          return;
+        }
+        if (
+          (this.squares[1] === this.squares[7] ||
+            this.squares[1] === this.squares[6]) &&
           this.squares[1] === 'O' &&
           this.chars.length === 3
         ) {
@@ -115,6 +130,15 @@ export class AppComponent implements OnInit {
           this.squares[3] === 'O'
         ) {
           this.squares.splice(6, 1, 'X');
+          this.chars.push('X');
+          return;
+        }
+        if (
+          this.squares[6] === this.squares[5] &&
+          this.squares[6] === 'O' &&
+          this.chars.length === 3
+        ) {
+          this.squares.splice(8, 1, 'X');
           this.chars.push('X');
           return;
         }

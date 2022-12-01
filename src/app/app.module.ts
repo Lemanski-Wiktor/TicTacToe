@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SquareComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, SquareComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
